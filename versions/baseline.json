@@ -1,0 +1,5 @@
+{
+  "default": {
+    "libarchive": { "baseline": "3.4.3", "port-version": 7 },
+  }
+}
