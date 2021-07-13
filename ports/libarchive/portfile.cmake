@@ -5,7 +5,7 @@ vcpkg_from_github(
     REPO AndyBrown91/libarchive
     REF 63298dce96a18d5a7b5b018e7fd9486432211ff9   #v3.4.3
     SHA512  2e39cdcf76d0ae9141d1d281b4a33915fedebdba75303fa321bc76ed2c7c92d98843162eab48b3f6218091ef1d1062f288e90f14ef877710f73a690174d8f994
-    HEAD_REF windows-long-path-fix
+    HEAD_REF master
     PATCHES
         fix-buildsystem.patch
         fix-dependencies.patch

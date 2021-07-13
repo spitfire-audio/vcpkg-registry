@@ -3,7 +3,7 @@
   "version-semver": "3.4.3",
   "port-version": 7,
   "description": "Library for reading and writing streaming archives",
-  "homepage": "https://github.com/libarchive/libarchive",
+  "homepage": "https://github.com/AndyBrown91/libarchive",
   "supports": "!uwp",
   "dependencies": [
     "zlib"
