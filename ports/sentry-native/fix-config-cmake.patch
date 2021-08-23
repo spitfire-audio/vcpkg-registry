@@ -1,0 +1,28 @@
+diff --git a/sentry-config.cmake.in b/sentry-config.cmake.in
+index 89ea345118db54d773d41526f729ada676ed531f..8a1fc3b674bda88fbae80b122e1af8eb0fe2d1f3 100644
+--- a/sentry-config.cmake.in
++++ b/sentry-config.cmake.in
+@@ -1,11 +1,13 @@
+ @PACKAGE_INIT@
+ 
++include(CMakeFindDependencyMacro)
++
+ set(SENTRY_BACKEND @SENTRY_BACKEND@)
+ set(SENTRY_TRANSPORT @SENTRY_TRANSPORT@)
+ 
+ if(SENTRY_BACKEND STREQUAL "crashpad")
+    if(@SENTRY_CRASHPAD_SYSTEM@)
+-       find_package(crashpad REQUIRED)
++       find_dependency(crashpad REQUIRED)
+    else()
+        include("${CMAKE_CURRENT_LIST_DIR}/sentry_crashpad-targets.cmake")
+    endif()
+@@ -14,7 +16,7 @@ endif()
+ include("${CMAKE_CURRENT_LIST_DIR}/sentry-targets.cmake")
+ 
+ if(SENTRY_TRANSPORT STREQUAL "curl" AND NOT @BUILD_SHARED_LIBS@)
+-   find_package(CURL REQUIRED)
++   find_dependency(CURL REQUIRED)
+    set_property(TARGET sentry::sentry APPEND
+        PROPERTY INTERFACE_LINK_LIBRARIES ${CURL_LIBRARIES})
+ endif()

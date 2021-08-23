@@ -1,5 +1,9 @@
 {
   "default": {
-    "libarchive": { "baseline": "3.4.3", "port-version": 7 }
+    "libarchive": { "baseline": "3.4.3", "port-version": 7 },
+    "sentry-native": {
+      "baseline": "0.4.12",
+      "port-version": 1
+    }
   }
 }
