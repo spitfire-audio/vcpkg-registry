@@ -1,5 +1,5 @@
 diff --git a/sentry-config.cmake.in b/sentry-config.cmake.in
-index 89ea345118db54d773d41526f729ada676ed531f..8a1fc3b674bda88fbae80b122e1af8eb0fe2d1f3 100644
+index 89ea345118db54d773d41526f729ada676ed531f..38c8db63836a032c9a7a42c270fb1050d15fb975 100644
 --- a/sentry-config.cmake.in
 +++ b/sentry-config.cmake.in
 @@ -1,11 +1,13 @@
@@ -24,5 +24,6 @@ index 89ea345118db54d773d41526f729ada676ed531f..8a1fc3b674bda88fbae80b122e1af8eb
 -   find_package(CURL REQUIRED)
 +   find_dependency(CURL REQUIRED)
     set_property(TARGET sentry::sentry APPEND
-        PROPERTY INTERFACE_LINK_LIBRARIES ${CURL_LIBRARIES})
+-       PROPERTY INTERFACE_LINK_LIBRARIES ${CURL_LIBRARIES})
++       PROPERTY INTERFACE_LINK_LIBRARIES CURL::libcurl)
  endif()
