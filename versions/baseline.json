@@ -4,6 +4,10 @@
     "sentry-native": {
       "baseline": "0.4.12",
       "port-version": 2
-    }
+    },
+    "aws-sdk-cpp": {
+      "baseline": "1.9.96",
+      "port-version": 5
+    },
   }
 }
